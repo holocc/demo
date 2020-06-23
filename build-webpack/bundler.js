@@ -74,7 +74,7 @@ function bundle(graph) {
   const result = `
     (function(modules) {
       function require(id) {
-        const [fn, mapping] = modules(id);
+        const [fn, mapping] = modules[id];
 
         function localRequire(relativePath) {
           return require(mapping[relativePath]);
